@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_display"
+        android:icon="@drawable/ic_baseline_personal_video_24"
+        android:title="Display" />
+
+    <item
+        android:id="@+id/nav_camera"
+        android:icon="@drawable/ic_baseline_camera_alt_24"
+        android:title="Camera" />
+
+    <item
+        android:id="@+id/nav_censor"
+        android:icon="@drawable/ic_baseline_control_camera_24"
+        android:title="Sensor" />
+
+</menu>

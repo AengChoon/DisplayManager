@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="TODO"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/logo" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/display_textview_title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="Display RGB Control"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/display_rgb_white_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:checked="false"
+                    android:text="RGB" />
+
+                <TextView
+                    android:id="@+id/display_textview_red"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Red"
+                    android:textColor="@color/black" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/display_slider_red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:stepSize="1"
+                    android:valueFrom="0"
+                    android:valueTo="255"
+                    app:trackColorActive="#7a7cff"
+                    app:thumbColor="#304ffe"
+                    app:thumbRadius="10dp"
+                    app:tickVisible="false"
+                    app:trackHeight="8dp" />
+
+                <TextView
+                    android:id="@+id/display_textview_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Green"
+                    android:textColor="@color/black" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/display_slider_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:stepSize="1"
+                    android:valueFrom="0"
+                    android:valueTo="255"
+                    app:trackColorActive="#7a7cff"
+                    app:thumbColor="#304ffe"
+                    app:thumbRadius="10dp"
+                    app:tickVisible="false"
+                    app:trackHeight="8dp" />
+
+                <TextView
+                    android:id="@+id/display_textview_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Blue"
+                    android:textColor="@color/black" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/display_slider_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:stepSize="1"
+                    android:valueFrom="0"
+                    android:valueTo="255"
+                    app:trackColorActive="#7a7cff"
+                    app:thumbColor="#304ffe"
+                    app:thumbRadius="10dp"
+                    app:tickVisible="false"
+                    app:trackHeight="8dp" />
+
+                <TextView
+                    android:id="@+id/display_textview_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="White"
+                    android:textColor="@color/black"
+                    android:visibility="gone" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/display_slider_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:stepSize="1"
+                    android:valueFrom="0"
+                    android:valueTo="255"
+                    android:visibility="gone"
+                    app:trackColorActive="#7a7cff"
+                    app:thumbColor="#304ffe"
+                    app:thumbRadius="10dp"
+                    app:tickVisible="false"
+                    app:trackHeight="8dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="Display Youtube Control"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/youtube_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/display_edittext_url"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Youtube Video URL"
+                        android:inputType="textUri" />
+
+                    <Button
+                        android:id="@+id/display_button_youtube"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:backgroundTint="#304ffe"
+                        android:textColor="@color/white"
+                        android:text="Play" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:background="@drawable/border"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/display_textview_title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="Display External Video Control"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/display_video_image_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:checked="false"
+                    android:text="Videos" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
