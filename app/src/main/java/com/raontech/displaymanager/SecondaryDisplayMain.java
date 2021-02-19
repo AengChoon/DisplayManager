@@ -19,12 +19,12 @@ public class SecondaryDisplayMain extends Presentation {
     }
 
     public void setBackGroundRGB(int red, int green, int blue) {
-        LinearLayout display = (LinearLayout) findViewById(R.id.secondary_display_main);
+        LinearLayout display = findViewById(R.id.secondary_display_main);
         display.setBackgroundColor(Color.rgb(red, green, blue));
     }
 
     public void setBackGroundWhite(int white) {
-        LinearLayout display = (LinearLayout) findViewById(R.id.secondary_display_main);
+        LinearLayout display = findViewById(R.id.secondary_display_main);
         display.setBackgroundColor(Color.rgb(white, white, white));
     }
 }

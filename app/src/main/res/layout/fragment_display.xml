@@ -3,18 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/background"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:contentDescription="TODO"
-        android:scaleType="centerCrop"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:scaleType="center"
         app:srcCompat="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/display_image_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/ic_baseline_check_circle_24" />
+
+        <TextView
+            android:id="@+id/display_textview_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connected" />
+
+        <ImageButton
+            android:id="@+id/display_button_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="#304FFE"
+            app:srcCompat="@drawable/ic_baseline_refresh_24" />
+
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,7 +53,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -68,10 +97,10 @@
                     android:stepSize="1"
                     android:valueFrom="0"
                     android:valueTo="255"
-                    app:trackColorActive="#7a7cff"
                     app:thumbColor="#304ffe"
                     app:thumbRadius="10dp"
                     app:tickVisible="false"
+                    app:trackColorActive="#7a7cff"
                     app:trackHeight="8dp" />
 
                 <TextView
@@ -89,10 +118,10 @@
                     android:stepSize="1"
                     android:valueFrom="0"
                     android:valueTo="255"
-                    app:trackColorActive="#7a7cff"
                     app:thumbColor="#304ffe"
                     app:thumbRadius="10dp"
                     app:tickVisible="false"
+                    app:trackColorActive="#7a7cff"
                     app:trackHeight="8dp" />
 
                 <TextView
@@ -110,10 +139,10 @@
                     android:stepSize="1"
                     android:valueFrom="0"
                     android:valueTo="255"
-                    app:trackColorActive="#7a7cff"
                     app:thumbColor="#304ffe"
                     app:thumbRadius="10dp"
                     app:tickVisible="false"
+                    app:trackColorActive="#7a7cff"
                     app:trackHeight="8dp" />
 
                 <TextView
@@ -133,10 +162,10 @@
                     android:valueFrom="0"
                     android:valueTo="255"
                     android:visibility="gone"
-                    app:trackColorActive="#7a7cff"
                     app:thumbColor="#304ffe"
                     app:thumbRadius="10dp"
                     app:tickVisible="false"
+                    app:trackColorActive="#7a7cff"
                     app:trackHeight="8dp" />
 
             </LinearLayout>
@@ -171,8 +200,8 @@
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:hint="Youtube Video URL"
-                        android:inputType="textUri" />
+                        android:inputType="textUri"
+                        android:text="https://youtu.be/WMh0KzwTviY" />
 
                     <Button
                         android:id="@+id/display_button_youtube"
@@ -180,17 +209,18 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:backgroundTint="#304ffe"
-                        android:textColor="@color/white"
-                        android:text="Play" />
+                        android:text="Play"
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
 
             </LinearLayout>
+
             <LinearLayout
-                android:layout_margin="10dp"
-                android:background="@drawable/border"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/border"
                 android:orientation="vertical">
 
                 <TextView
